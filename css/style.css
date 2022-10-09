@@ -116,6 +116,7 @@ body{
   font-size: 16px;
   letter-spacing: 2.5px;
   margin-top:140px;
+  margin-bottom: 50px;
 }
 
 .hide{
@@ -212,3 +213,64 @@ body{
   margin-top: 154px;
 }
 
+
+@media only screen and (min-width: 800px) {
+  .header{
+    width: 700px;
+    height:150px;
+  }
+
+  .score-container{
+    height: 114px;
+    width: 150px;
+  }
+
+  .logo{
+    width:155px;
+    margin:24px 23px;
+  }
+
+  .score-title{
+    font-size: 16px;
+  }
+  .score-display
+  {
+    font-size: 64px;
+    margin-top: 10px ;
+  }
+
+  .pick-container{
+    background-size: 255px;
+    width:476px;
+    height: 430px;
+  }
+  
+  .icon-container{
+    width: 198px;
+    height: 203px;
+  }
+
+  .icon{
+    width:73px;
+    height:86px;
+  }
+  #paper
+  {
+    top:0px;
+    left:0px;
+  }
+
+  #scissors{
+    bottom:200px;
+    left:275px;
+  }
+
+  #rock{
+    bottom:180px;
+    left:140px;
+  }
+
+  .compare-container{
+    width:700px;
+  }
+}
