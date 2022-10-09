@@ -1,3 +1,15 @@
+/**
+ * Game is broken up into 3 stages
+ * Stage 1 - Player selects
+ *  - When the player picks, hold reference to selection
+ *  - hide select panel and show compare panel
+ *  - set player pick icon to the player's selection
+ * Stage 2 - AI selects
+ * - after a delay, player makes random selection
+ * - display the computer selection
+ * Stage 3 - determine winner
+ * -
+ *  */
 // Game Variables
 let playerPick;
 let aiPick;
@@ -21,24 +33,29 @@ let playerPickIcon = document.getElementById("player-pick");
 let aiPickIcon = document.getElementById("ai-pick");
 let resetBtn = document.getElementById('reset-btn')
 
+// Rules Modal
+let rulesBtn = document.getElementById('rules-btn')
+let rulesModal = document.getElementById('rules-modal')
+let mobileClose = document.getElementById('mobile-close')
 rock.addEventListener("click", GetPlayerPick)
 paper.addEventListener("click", GetPlayerPick)
 scissors.addEventListener("click", GetPlayerPick)
 resetBtn.addEventListener("click", PlayAgain)
 scoreDisplay.textContent = localStorage.getItem("score")
 
-/**
- * Game is broken up into 3 stages
- * Stage 1 - Player selects
- *  - When the player picks, hold reference to selection
- *  - hide select panel and show compare panel
- *  - set player pick icon to the player's selection
- * Stage 2 - AI selects
- * - after a delay, player makes random selection
- * - display the computer selection
- * Stage 3 - determine winner
- * -
- *  */
+rulesBtn.onclick = function() {
+    rulesModal.style.display = "flex";
+  }
+
+mobileClose.onclick = function() {
+    rulesModal.style.display = "none";
+  }
+
+  window.onclick = function(event) {
+    if (event.target == rulesModal) {
+      rulesModal.style.display = "none";
+    }
+}
 
 function GetPlayerPick() {
   playerPick = this.id;
@@ -100,7 +117,6 @@ function DisplayPicks() {
   GetAIPick();
   ComparePicks();
 }
-
 
 function PlayAgain()
 {
