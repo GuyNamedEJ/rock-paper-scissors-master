@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <title>Guy Named EJ | Rock, Paper, Scissors</title>
+</head>
+
+<body>
+  <main class="container">
+    <section class="header">
+      <img class="logo" src="/images/logo.svg" alt="logo">
+  
+      <div class="score-container">
+        <p class="score-title">Score</p>
+        <h1 id="score-display" class="score-display"></h1>
+      </div>
+    </section>
+  
+    <section id="stage-1" class="pick-container">
+      <div id="paper" class="icon-container paper">
+        <img class="icon" src="/images/icon-paper.svg" alt="Paper">
+      </div>
+
+      <div id="scissors" class="icon-container scissors">
+        <img class="icon" src="/images/icon-scissors.svg" alt="scissors">
+      </div>
+
+      <div id="rock" class="icon-container rock">
+        <img class="icon" src="/images/icon-rock.svg" alt="rock">
+      </div>
+    </section>
+
+    <section id="stage-2" class="compare-container">
+      <div class="pick-display">
+        <p class="pick-title">You Picked</p>
+        <div id="player-pick-container" class="icon-container">
+          <img id="player-pick" class="icon" src="" alt="Player Pick">
+        </div>
+      </div>
+
+      <div class="pick-display">
+        <p class="pick-title">The House Picked</p>
+        <div id="ai-pick-container" class="icon-container">
+          <img id="ai-pick" class="icon" src="" alt="">
+        </div>
+      </div>
+    </section>
+
+    <section id="result-panel" class="result-container">
+      <h1 id="result-text" class="result-text">Result</h1>
+      <button id="reset-btn" class="reset-btn">Play Again</button>
+    </section>
+
+    <button class="rules-btn">Rules</button>
+  </main>
+  <script src="/js/app.js"></script>
+</body>
+
+</html>
